@@ -1,0 +1,78 @@
+ANOTAÇÕES C++
+
+	* CRIAR UM PROJETO: File >> new >> Project >> Console Application >> Go >> C++
+
+	* Projeto tem alguns recursos a mais do que um simples arquivo isolado, o principal é poder rodar o DEBUG; 
+
+	* Biblioteca padrão de entrada e saída de dados é a iostream, deve se declarar no começo do programa, dessa forma: #include <iostream>;
+	* Biblioteca responsavel por formatar o número de casas decimais é a iomanip: #include <iomanip>;
+	* Biblioteca responsavel por usar funções de manipulação de texto é a string: #include <string>;
+	* Namespace, é uma forma de organizar os arquivos e bibliotecas do meu projeto. 
+	* cout: comando usado para fazer uma saída de dados na tela (mesma coisa que o escreva e o printf); ELE PERTENCE AO NAMESPACE STD (caso for apagado o namespace, não ira funcionar o cout. caso eu queira mesmo assim 	  	  	  apagar o namespace, para que seja impresso na tela a mensagem devo colocar: std::cout << "Texto" << std:: endl;
+
+	* Modelo padrão de código em C++: 
+
+		#include <iostream>
+
+		using namespace std;
+
+		int main()
+		{
+		    cout << "Hello world!" << endl;
+		    return 0;
+		}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+*TIPOS DE DADOS
+	* Será igual os dalinguagem C (int, double char ) unica coisa que mudsa é o tipo de dado para texto e para valor lógigo, para texto usamos o STRING e para valor lógico usamos o BOOL;
+	* Comando para fixar o número de casas decimais: cout << fixed <<setprecision(2);
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+*OPERADORES:
+	* Os operadores da linguagem C++ são exatamente os mesmos da linguagem C;
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+*SAIDA DE DADOS
+	* O comando usado na saida de dados é o cout <<. Para conseguir usar, preciso colocar a biblioteca #include <iostream> e também preciso referenciar o namespace std; 
+	* Quando possuir duas saídas de dados, preciso usar o comando endl para que tenha uma quebra de linha. cout << "texto" << endl; 	 	
+	* Se eu quiser definir que os números de ponto flutuantes vão possuir uma determinada quantidade de casas decimais, devo usar a seguite formatação: cout << fixed << setprecision (2); Para isso, devo adicionar a 	  	  biblioteca: #include <iomanip>. Também pode ser daclarado na linha que estou fazendo a saída de dados, ex: cout << fixed << setprecison (2) << x <<endl;
+	* Para não ficar adicionando sempre a biblioteca específica, posso utilizar a biblioteca universal, ela vai carregar todas as bibliotecas e não vou precisar ficar adiconando de uma a uma: #include <bits/stdc++.h> 
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+* ENTRADA DE DADOS: 
+	* Comando usado: cin >>, para ler o texto até a quebra de linha, uso o getline (getline (cin, nomeDaVariavel)). Devo usar a biblioteca #include <iostream> e o comando using namespace std; 
+	
+*LIMPEZA DE BUFFER:
+	* QUANDO USAR: Quando ler um texto até a quebra de linha (getline), mas antes o programa já leu algum outro dado e deixou uma quebra de linha pendente. Comando de limpeza de buffer: cin.ignore(INT_MAX, '\n'). Para esse 	 comando funcionar, devo declarar a biblioteca  #include <climits>;
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+*ESTRUTURAS DE CONTROLE: 
+	* As estruturas de controle em C++ são exatamente iguais a linguagem C. (IF ELSE, WHILE, FOR); 
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+*ARRANJOS:
+	* Os arranjos (arrays) são os vetores e matrizes, também seguem a mesma lógica da linguagem C. 
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+* RAIZ QUADRADA;
+	* Para encontrar a raiz quadrada de um número, utilizo a função sqrt: diagonal = sqrt (pow(base, 2.0) + pow(altura, 2.0)). Precisa que a biblioteca cmath esteja declarada, é a biblioteca de funções matemáticas: #include 	  <cmath>;
+
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
