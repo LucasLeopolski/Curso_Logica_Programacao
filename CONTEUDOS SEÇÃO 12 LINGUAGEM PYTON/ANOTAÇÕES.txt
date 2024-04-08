@@ -1,0 +1,283 @@
+* VÁRIAVEIS E TIPOS DE DADOS:
+
+* Inteiro: int   - não tem limite definido;
+* Real: float;
+* Caractere: str  - Não exixtem um tipo char, os valores literais devem ter aspas duplas,ex: "F";
+* Caractere (Texto): str - Valores literais devem ter aspas duplas, ex: "Maria";
+* Logico: boolean - valores possiveis: false, true;
+
+* A linguagem Pyton é uma linguagem interpretada, e é uma linguagem de tipagem dinâmica. Isso significa que não preciso declarar o tipo da variavél, o própio  progarma vai ler e vai interpretar o tipo da variavél. Quando declaro o tipo, estou dando basicamente uma dica para o interpretador e não estou informando  que aquela váriavel vai aceitar só aquele tipo de valor;
+
+* Na declaração de variaveis que terão o mesmo tipo de dado, não posso delaralas juntas ex: idade, telefone: int; Preciso colocar  uma por uma ex: idade: int;  telefone: int;
+
+* EX de programa em Pyton:
+
+// aqui esta declarando os tipos, mas se quiser não preciso declar, só coloco ex: idade = 20; Vai funcionar do mesmo jeito;
+idade: int
+salario: float
+altura: float
+genero: str
+nome: str
+
+idade = 20;
+salario = 5800.5
+altuea = 1.68
+genero = "F" // aceita aspas simples e aspas duplas
+nome = "Maria"
+
+
+print (f"IDADE = {idade}")   // essa forma de impressão se chama interpolação de váriaveis (em py pode imprimir de várias formas)
+print (f"SALARIO = {salario: .2f}")
+print (f"ALTURA = {altura: .2f}")
+print (f"GENERO = {genero}")
+print (f"NOME = {nome}")
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+* OPERADORES
+
+* Tem os mesmos operadores aritiméticos da linguagem C e Java:
+* ADIÇÃO: (+)
+* SUBTRAÇÃO: (-)
+* MULTIPLICAÇÃO: (*)
+* DIVISÃO: (/)
+* RESTO DA DIVISÃO - MOD: (%)
+
+* O que acrescenta é os operadores de exponenciação e divisão inteira:
+* EXPONENCIAÇÃO - elevado: (**)
+* DIVISÃO INTEIRA: (//)
+
+
+
+
+* Tem os mesmos operadores comparativos da linguagem C e Java:
+* MENOR: (<)
+* MAIOR: (>)
+* MENOR OU IGUAL: (<=)
+* MAIOR OU IGUAL: (>=)
+* IGUAL: (==)
+* DIFERENTE: (!= ou <>)
+
+
+
+* Tem os mesmos operadores lógicos mudam comparados a linguagem C e Java:
+* E: (and)
+* OU: (or)
+* NÃO: (not)
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+* SAIDA DE DADOS:
+
+* Comando: print - Se eu colocar print ("texto") e na outra linha colocar print ("outro texto") ele vai quebrar linha. Se eu não quiser que isso ocorra, no caso, se eu quiser que imprima um do lado do outro, coloco da seguinte forma: print("texto", end = ''). obs: o end pode ser com aspas simples ou com aspas duplas;
+* Place holder de formatação das váriaveis:
+* int: (%d)
+* floate: (%f)
+* str: (%s)
+* Ex de utilização PlaceHolder:
+x = "Maria"
+y = 19
+
+print("%s tem %d anos" % (x,y))
+
+* Ex de como imprimir um número real com duas casas decimais com a função .format:
+
+
+x = float
+x = 2.34564
+print ("{:.2f}".format(x))  // aqui vai imprimir a variavel x com 2 casas decimais. Se quiser imprimir com todas as casas decimais tiro o .2
+
+
+* Impressão de dados com a interpolação de dados:
+
+
+salario: float
+altura: float
+genero: str
+nome: str
+
+idade = 32
+salario = 5800.5
+altuea = 1.68
+sexo = "F" // aceita aspas simples e aspas duplas
+nome = "Maria"
+
+
+print(f"A funcionaria {nome}, sexo {sexo}, ganha {salario:.2f} e tem {idade} anos.") // impressão com interpolação de dados
+
+print("A funcionaria {:s}, sexo {:s}, ganha {:.2f} e tem {:d} anos.".format(nome, sexo, salario, idade)) // impressão usando o place holder
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+* ENTRADA DE DADOS
+
+* Comando para ler dados do tipo texto: input("Mensagem")
+* Comando para ler dados do tipo numerico: variavel = int(ou float)(input ("Digite um numero: ))
+
+* EX:
+
+salario1: float
+salario2: float
+idade: int
+sexo: str
+
+nome1 = input("Nome da primeira pessoa: ")
+salrio1 = float (input("Salario da primeira pessoa: ")
+nome2 = input("Nome da segunda  pessoa: ")
+salrio2 = float (input("Salario da segunda pessoa: ")
+
+	salario1: float	
+	salario2: float 
+	nome1: str
+	nome2: str
+	sexo: str
+
+	nome1 = input("Nome da primeira pessoa: ")
+	salario1 = float(input("Salario da primeira pessoa: ))
+	
+	nome2 = input("Nome da segunda pessoa: ")
+	salario2 = float(input("Salario da segunda pessoa: ))
+
+	idade = int(input("Digite uma idade: "))
+	sexo = input("Digite um sexo ("F/M")")
+
+
+	print (f"Nome 1: {nome1}")    // interpolacao
+	print Salario 1: {salario1:.2f}")
+	
+	print (f"Nome 2: {nome2}")    // interpolacao
+	print Salario 2: {salario32:.2f}")
+
+	print(f"Idade: {idade}" )
+	print(f"Sexo: {sexo}" )
+
+
+---------------------------------------------------------
+
+*EXECUTAR O DEBUGGER NO PYCHARM
+	
+	* Habilitar/Desabilitar breakpoint: CTRL + F8
+	* Iniciar o Debug: SHIFT + F9
+	* Rodar passo a passo: F8
+	* Parar o debug: CTRL + F2
+	* Mostrar váriavies: (vai estar visivel na aba "Debugger")
+
+
+---------------------------------------------------------
+
+* ESTRUTURA CONDICIONAL (SE SENÃO) (IF ELSE):
+
+	* A lógica é a mesma da linguagem C e linguagem java, o que muda é a identação, segue em de como realizar: 
+	
+	* Estrutura simples (IF):
+	
+		if condição: 
+			comando1
+			comando2
+
+
+
+	* Estrutura Composta(IF ELSE):
+	
+		if condição: 
+			comando1
+			comando2
+		else:
+			comando3
+			comando4
+
+
+	* Estrutura Encadeamento(IF ELSE):
+	
+		if condição: 
+			comando1
+			comando2
+
+		elif condição2:
+			comando3
+			comando4
+		else: 
+			comando5
+			comando6
+
+
+---------------------------------------------------------
+
+* ESTRUTURA ENQUANTO (while):
+
+	* A lógica é a mesma da linguagem C e linguagem java, o que muda é a identação;
+	* Se a condição for verdadeira executa e volta, se for falsa pula fora 
+	* EX:
+	
+		while condição:
+			comando1
+			comando2
+
+---------------------------------------------------------
+
+* ESTRUTURA PARA (for):
+
+	* Em Python tem várias formas de fazer o FOR;
+	* Segue essas regras: 	
+		* Primeira vez: variavel assume o valor_inicial;
+		* Repetição: se a variasvel for menor que valor_final, executa erepete, senão pula fora;
+		*Na volta: incrementa a variavel de 1 ou do valor do passo se houver;
+
+	* EX:
+
+		for in range(valor_inicial, valor_final, [passo]):
+			comando1
+			comando2
+
+	* EX de aplicação no código: 
+
+			x: int
+			soma: int
+
+			N = int(input("Quantos números serão digitados? "))
+
+			soma = 0
+			for i in range(0,N):
+				x = int(input("Digite um número: "))
+				soma = soma + x 
+
+			print("SOMA = ", soma)
+
+
+---------------------------------------------------------
+
+* VETORES:
+	
+	* O Python não tem uma estrutura que é exatamente um vetor tradicional, no Python se trabalha com listas ou tuplas;
+	* Vamos usar as listas para trabalhar como se fossem os vetores, porque conseguimos acessar os elementos da lista utilizando o indexador de colchetes, igual as principais linguagens. 
+	* A lista não é homogêna, posso ter valores de tipos diferentes;
+	* Tem várias formas de criar uma lista em Python, a seguir segue um exemplo, que não é a forma mais simples, porém generaliza o que você quiser: 
+		
+		varial : [tipo] =  [0 for x in range(numero_de_elementos)] # obs: o tipo (:[tipo]) é opcional a declaração (trata-se do tipo de dados do vetor).
+
+		vet : [int] = [0 for x in range(2)] 
+
+	* EX de aplicação em código: 
+
+
+---------------------------------------------------------
+
+* MATRIZES: 
+	
+	* Da mesma forma que o vetor, Python não tem uma estrutura que seria um arranjo bidimencional de tamanho fixo. Trabalharemos com listas, no caso de matrizes será uma lista de listas.
+	* A forma a baixo não é a forma mais simples den criação de uma matriz, porem gereraliza a criação com tantas linhas e tantas colunas:
+		nome_matriz: [[tipo]] = [[0 for x in range (numero_de_colunas)] fpr x in range (numero_de_linhas)]
+
+
+
+-------------------------
+
+	* Para trabalhar com raiz quadrada, preciso importar a biblioteca de funções matematicas: import math.
+	* Ex de utilização: 
+
+		diagonal = math.sqrt(base ** 2 + altura ** 2) # (**) significa elevado 
+		
+
