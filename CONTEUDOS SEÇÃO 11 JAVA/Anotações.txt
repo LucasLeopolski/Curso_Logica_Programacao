@@ -1,0 +1,207 @@
+*ALGUNS DE TALHES SOBRE ECLIPSE:
+	* Workspace (selecionar a pasta onde os prjetos são salvos);
+	* Mudar Layout: Window >> Perspective >> Open Perspective >> (perspectiva que vou trabalhar, no caso JAVA . 
+	* Zerar Layout: Perspective >> Reset Perspective;
+	* Mostrar aba no console: Window >> Show View >> Console (usada para mostar o nosso programa excutando);
+	* Criar projeto: File >> New >> Java Project;
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+* Criar Classe:
+* Botaão direito na pasta "src" >> New >> Class;
+* Package: deixa em branco;
+* Nome da classe: Main(com M maiúsculo);
+* Marcar a opção: public static void main (String[] args){}
+* Dentro do projeto pode ter uma ou mais classes, deve ter pelo menos uma classe.
+* Java é uma linguagem orientada a objetos, então todo o código deve estar dentro de uma classe;
+* O código é organizado em funções, um programa executavél deve ter pelo menos uma função (main). Ela define o entrpoint (ponto de entrada) da nossa aplicação,  é onde vai começar a execução do programa. Tudo que estiver entre as {} do main serão executados em primeiro lugar. então é aqui que colocamos o algoritimo;  
+* Ex de código em java:
+public class Main {
+public static void main (String[] args) {
+
+System.out.println("Olá Mundo!");
+
+}
+
+}
+
+* Para executar o programa, clico com o botão direito em cima da classe >> Run as >> Java Application;
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+* Na pasta SRC que vão ser guardados os arquivos de codigo fonte do programa. SRC é a abreviação de SURCE que significa FONTE;
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+* VARIAVEIS E TIPOS DE DADOS:
+
+* Tipos de Dados:
+1. Numero inteiro (int) - Pode ser usado o LONG (long) para números maiores;
+2. Numero de ponto flutuante (double) usado para números de precisão dupla e (float) para números de precisão simples;
+3. Um unico caracter (char);
+4. Texto (String);
+5. Valor lógico (boolean);
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+* PROGRAMA ATRIBUINDO VARIAVEIS:
+import java.util.Locale;
+
+public class Main {
+public static voi main (String[] args){
+Locale.setDefault(Locale.US); // vai garantir que o separador dos números reais sejam o ponto e não a virgula.
+
+int idade;
+double salario, altura;
+char genero;
+String nome;
+
+idade = 20;
+salario = 5800.5;
+altura = 1.63
+genero = 'F';
+nome = "Maria Silva";
+
+System.out.println("IDADE = " + idade);
+System.out.println("SALARIO = " + String.format("%.2f", salario));
+System.out.println("ALTURA = " + String.format("%.2f", altura));
+System.out.println("GENERO = " + genero);
+System.out.println("NOME = " + nome);
+
+
+}
+
+
+}
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+*SAIDA DE DADOS:
+	* Comandos Usados para a saída de dados: System.out.print (""); - vai apresentar os dados tudo na mesma linha. System.out.println(""); - Vai apresentar os dados e no final vai pulara uma linha;
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+*PROCESSAMENTO DE DADOS / CASTING
+	* Vai funcionar da mesma forma que na linguagem C. Se eu quiser fazer uma divizão entre doi numeros inteiro e que meu resultado seja um número com ponto flutuante devo colocar o casting ex: 
+
+	int a,b;
+	double result;
+	
+	a = 5;
+	b = 2;
+	result = (double) a /b;  // o (double) é o casting . estou dizendo que quero o resultado da divisão em 				 // decimal, e não da divisão inteira;
+
+	System.out.println("result); // vai imprimir 2.5 
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+* ENTRADA DE DADOS: 
+	* Preciso criar o objeto Scanner, ex: 
+		Scanner sc = new Scanner(System.in);
+	
+			int x = sc.nextInt();
+			double y = sc.nextDouble();
+			char z = sc.next().charAt(0);  // charAt(0) é o char na posição 0. Então vai oegar só a primeira letra digitada;
+			String s = sc.nextLine();
+
+		sc.close(); // esta fechando o scanner;
+	
+	* Preciso importar a biblioteca Scanner para funcionar: import java.util.Scanner;
+
+* LIMPEZA DE BUFFER: Quando for ler um texto até a quebara de linha (nextLine), e o programa já leu algum outro dado e deixou uma quebra de linha (enter) preciso fazer a limpeza de buffer, o camando para limpeza de buffer é: sc.nextLine(); Ex de aplkicação: 
+
+	System.out.print("Digite a sua idade: ");
+sc.nextInt();
+System.out.print("Digite seu nome completo: ");
+sc.nextLine();          // Limopeza do buffer - esta consumida a quebra de linha gerada pelo enter depois de digitar a idade;
+nome = sc.nextLine();
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+* EXECUTAR O DEBUGGER:
+
+* Primeira coisa, preciso definir uma linha que vai ser o breacke point (onde vai começar a execução);
+* Para iniciar o debugger preciso selecionar a linha que quero que seja o ponto de partida (só clico na linha) >> RUN >> TOGGLE BREAKPOINT - vai aparecer uma bolinha na linha que eu selecionei. Posso dar o comando CTRL + SHIFT + D ou dar dois cliques em cima da linha que quero iniciar o debugg;
+* Para iniciar o debugg, clico com  o botão direito em cima da classe main >> Debug As >> Java Application
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+* ESTRUTURAS CONDICIONAL:
+
+* if E else; Segue a mesma lógica da linguagem C;
+* A estrutura enquanto  (while) também é igual a liguagem C: while (condição) { comandos };
+* A estrutura para (for) também é igual a estrura C;
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+* VETORES:
+
+* Em Java, preciso declar primeiramente o tipo do vetor, depois [] ai o nome do vetor e o seguinte coemnado = new TIPO DO VETOR [TAMANHO VETROR]; Dessa forma:
+double [] vet = new double [3]; //Criei um vetor com 3 posições
+* Lógica para ler os dados que serão alocados em um vetor:
+
+for (int i = 0; i < 3; i++){
+System.out.print("Digite um número: ");
+vet[i] = sc.nextDouble();
+
+}
+
+* Lógica para imprimir dados que foram lidos:
+
+for (int i = 0; i < 3; i++){
+System.out.println(String.format("%.1f", vet[i] ));
+vet[i] = sc.nextDouble();
+
+}
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+* MATRIZES:
+
+* No Java preciso colocar primeriro o tipo dos elementos da matriz, depois [][] que esta indicando que é uma matriz de duas dimenssões (linhas e colunas) >> aí coloco esse comando : = new int [2][2];  - int [][] mat = new int [2][2];
+
+* Lógica para ler os dados que serão alocados em uma matriz:
+
+for (int i = 0; i < 2; i++){ // vai percorrer as linhas
+for( int j = 0; < 2; j++){ // vai percorrer as colunas
+System.out.print("Elemento " + i + "," + j + "]: ");
+mat[i][j] = sc.nextInt();
+
+}
+}
+
+
+* Lógica para imprimir dados que foram lidos:
+
+for (int i = 0; i < 2; i++){
+for( int j = 0; < 2; j++){
+System.out.print(mat[i][j] + " ");
+
+}
+
+System.out.println();
+}
+
+
+}
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 
+
+
